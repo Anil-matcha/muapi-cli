@@ -330,6 +330,14 @@ OpenAI notes that these are maximum scores at any effort and that evaluations we
 - **Benchmark scores are configuration-dependent.** Reproduce the task mix and harness before using a score to choose a production model.
 - **Cybersecurity access is controlled.** Astra meets OpenAI’s Critical cybersecurity capability threshold; advanced cybersecurity access is expected to be more limited and may be provided through programs such as Daybreak.
 
+### Third-party gateway readiness
+
+Before switching a gateway to `gpt-6-astra`, confirm that exact ID in the gateway's live catalog; a provider announcement alone does not prove the route is active. Record the endpoint, price, access result, test-pack outcome, fallback model, and observation date before moving traffic.
+
+The [Argolink GPT-6 API readiness guide](https://argolink.io/en/blog/gpt-6-api-readiness?utm_source=github&utm_medium=resource-list&utm_campaign=gh-anil-awesome-gpt6-astra-pr&utm_content=readme-gateway-readiness) is one community example of this workflow. Argolink is preparing GPT-6 Astra support, but its public catalog checked on September 4, 2026 did not yet list `gpt-6-astra`; re-check the live catalog rather than treating this link as an availability claim.
+
+**Evidence:** Community tutorial and live-catalog observation · **Date:** 2026-09-04
+
 ## 🤝 Contributing
 
 Add a case when it contains a concrete workflow, prompt, integration, evaluation, or limitation that another reader can reproduce or inspect.
