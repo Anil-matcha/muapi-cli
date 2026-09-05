@@ -208,19 +208,6 @@ For Astra, use the Responses API when the workflow needs function calling, web s
 
 **Evidence:** Official model guidance and API model catalog · **Date:** 2026-09-04
 
-### Community integration: [Astra Tandem](https://github.com/sjh9714/astra-tandem)
-
-A fixed **GPT-5.6 Luna implementation → GPT-6 Astra independent review** CLI using an existing Codex CLI login. It creates a separate Git worktree, saves a binary-capable patch and structured review, then requires explicit local application. The implementation model can also be Terra or Sol.
-
-```sh
-npm install -g astra-tandem
-astra-tandem "Fix the failing parser test"
-```
-
-Run from a clean, committed Git repository with Node 20+, Git, Codex CLI 0.153+, and access to both selected models. The implementation uses a workspace-write command sandbox; review uses read-only. Existing custom tools and policies can still affect a run. Model execution consumes the configured Codex allowance or API billing. There is no automatic repair loop or guaranteed cost saving.
-
-**Evidence:** Community / Integration · **Observed:** 2026-09-05 · [Live smoke test and limitations](https://github.com/sjh9714/astra-tandem/blob/main/docs/validation.md) · [Inspectable implementation](https://github.com/sjh9714/astra-tandem/blob/main/src/pipeline.mjs)
-
 <a id="research-files-and-professional-work"></a>
 ## 🔎 Research, Files, and Professional Work
 
@@ -333,6 +320,19 @@ Selected scores reported by OpenAI are shown below:
 OpenAI notes that these are maximum scores at any effort and that evaluations were run in a research environment or through the API; production ChatGPT can differ because system prompts, tools, and other settings change. Record the exact model, effort, harness, tool access, task release, and grading method when reproducing a result.
 
 **Evidence:** Official launch scorecard · **Date:** 2026-09-03
+
+### Community evaluation: [Astra Sweetspot](https://github.com/sjh9714/astra-sweetspot)
+
+A small **Astra low/medium/high versus Sol medium** coding experiment on two historical p-retry bugs. Eight runs share starting code and prompts within each task. Published candidate patches, token counts, wall time, and independent regression checks make each result inspectable. Each condition was run once; the public historical tasks are not a held-out benchmark, and tokens do not measure subscription quota.
+
+```sh
+npx astra-sweetspot
+npx astra-sweetspot run abort-delay --model astra --effort medium
+```
+
+The first command reads bundled results without model inference. Reproduction uses Node 20+, Git, Codex CLI 0.153.0+, and an existing Codex login; it consumes the account's usage in a fresh fixture workspace.
+
+**Evidence:** Community / Evaluation · **Observed:** 2026-09-05 · [Method, sources, and limitations](https://github.com/sjh9714/astra-sweetspot/blob/main/docs/METHODOLOGY.md) · [All eight receipts and patches](https://github.com/sjh9714/astra-sweetspot/tree/main/results)
 
 ## ⚖️ Practical Limits
 
