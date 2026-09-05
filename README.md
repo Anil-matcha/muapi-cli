@@ -208,6 +208,19 @@ For Astra, use the Responses API when the workflow needs function calling, web s
 
 **Evidence:** Official model guidance and API model catalog · **Date:** 2026-09-04
 
+### Community integration: [Astra Tandem](https://github.com/sjh9714/astra-tandem)
+
+A fixed **GPT-5.6 Luna implementation → GPT-6 Astra independent review** CLI using an existing Codex CLI login. It creates a separate Git worktree, saves a binary-capable patch and structured review, then requires explicit local application. The implementation model can also be Terra or Sol.
+
+```sh
+npm install -g astra-tandem
+astra-tandem "Fix the failing parser test"
+```
+
+Run from a clean, committed Git repository with Node 20+, Git, Codex CLI 0.153+, and access to both selected models. The implementation uses a workspace-write command sandbox; review uses read-only. Existing custom tools and policies can still affect a run. Model execution consumes the configured Codex allowance or API billing. There is no automatic repair loop or guaranteed cost saving.
+
+**Evidence:** Community / Integration · **Observed:** 2026-09-05 · [Live smoke test and limitations](https://github.com/sjh9714/astra-tandem/blob/main/docs/validation.md) · [Inspectable implementation](https://github.com/sjh9714/astra-tandem/blob/main/src/pipeline.mjs)
+
 <a id="research-files-and-professional-work"></a>
 ## 🔎 Research, Files, and Professional Work
 
