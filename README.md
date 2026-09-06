@@ -18,6 +18,7 @@
 - [awesome-generative-ai-apps](https://github.com/Anil-matcha/awesome-generative-ai-apps) — 50+ production-ready AI SaaS templates for turning model workflows into applications.
 - [OpenAI Cookbook](https://github.com/openai/openai-cookbook) — Practical OpenAI API examples and patterns.
 - [OpenAI API documentation](https://developers.openai.com/api/docs) — Current API, model, tools, and production guidance.
+- [GPT-6 Astra on MuAPI](https://muapi.ai/gpt-6-astra) — Access `gpt-6-astra` through MuAPI's unified media/model API alongside other generative models, with automatic failover.
 
 ## ✨ Introduction
 
@@ -88,6 +89,8 @@ print(response.output_text)
 ```
 
 See the [official reasoning examples](https://developers.openai.com/api/docs/guides/reasoning) and [Responses API migration guide](https://developers.openai.com/api/docs/guides/migrate-to-responses) for production request patterns.
+
+For projects that already call multiple generative APIs through one key, [MuAPI](https://muapi.ai/gpt-6-astra) exposes `gpt-6-astra` alongside other providers with automatic failover — useful when Astra is one model in a larger multi-model pipeline rather than the only dependency.
 
 ## 📑 Menu
 
