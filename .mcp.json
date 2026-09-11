@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "muapi": {
+      "type": "http",
+      "url": "https://api.muapi.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MUAPI_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "muapi",
+  "version": "1.0.0",
+  "description": "Muapi generative-media tools for Grok: create and transform images, videos, music, and audio through the Muapi API.",
+  "author": {
+    "name": "Muapi",
+    "url": "https://muapi.ai"
+  },
+  "repository": "https://github.com/SamurAIGPT/muapi-cli",
+  "license": "MIT",
+  "keywords": [
+    "muapi",
+    "muapi.ai",
+    "ai image generation",
+    "ai video generation",
+    "ai audio generation",
+    "generative media"
+  ]
+}

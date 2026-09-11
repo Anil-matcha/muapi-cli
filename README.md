@@ -313,6 +313,29 @@ muapi mcp serve
 
 > For more details on the self-hosted MCP server see [muapi-mcp-server](https://github.com/SamurAIGPT/muapi-mcp-server).
 
+## Grok Build Plugin
+
+This repository also ships a Grok Build plugin that connects Grok to Muapi's hosted MCP
+server. Install the `muapi` plugin from the Grok Build marketplace, then set
+`MUAPI_API_KEY` in the environment used by Grok Build:
+
+```bash
+export MUAPI_API_KEY="YOUR_MUAPI_KEY"
+```
+
+The plugin provides live model discovery plus image, video, audio, enhancement, editing, and
+async-result tools. Generation and enhancement consume Muapi credits; account top-ups, key
+management, and external publishing remain approval-gated by the plugin instructions.
+
+For a direct project-local setup without waiting for marketplace review, add the hosted MCP
+server to Grok Build with:
+
+```bash
+grok mcp add --transport http muapi \
+  https://api.muapi.ai/mcp \
+  --header "Authorization: Bearer ${MUAPI_API_KEY}"
+```
+
 ## Agentic Pipeline Examples
 
 ```bash
